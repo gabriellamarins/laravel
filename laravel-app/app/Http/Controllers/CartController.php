@@ -10,7 +10,18 @@ class CartController extends Controller
 
 
     public function index(){
-        echo "Panier";
-//        return view();
-    }
+
+       $cart = "Panier";
+
+
+            $arraypanier = [
+                'cart' => $cart,
+
+            ];
+
+            return view('cart', $arraypanier);
+        }
+//        echo "Panier";
+
+
 }

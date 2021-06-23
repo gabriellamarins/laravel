@@ -10,16 +10,16 @@ class HomeController extends Controller
     //
 public function index(){
 
-    $test = "Je fais un test.";
-    $test2 = "alguma coisa";
+    $test = "Home page";
+
 
     $arraytest = [
         'test' => $test,
-        'test2'=> $test2,
+
     ];
 
 //    echo "Home Page";
-        return view('home', $arraytest);
+        return view('homepage', $arraytest);
     }
 
 //    public function show(){
