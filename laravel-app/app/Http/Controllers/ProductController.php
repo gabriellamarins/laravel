@@ -24,7 +24,7 @@ class ProductController extends Controller
     public function show($id){
  //       echo "Fiche du Produit". $id;
 //
-        $id;
+
         $infoproduit = "Fiche du Produit";
 
 
