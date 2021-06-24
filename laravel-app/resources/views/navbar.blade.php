@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html"
+                    <a class="nav-link active" aria-current="page" href="/"
                     >Home</a
                     >
                 </li>
@@ -44,22 +44,23 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="index.html#features"
+                            <a class="dropdown-item" href="#features"
                             >FEATURES</a
                             >
                         </li>
                         <li>
-                            <a class="dropdown-item" href="index.html#partenaires"
+                            <a class="dropdown-item" href="#partenaires"
                             >PARTENAIRES</a
                             >
                         </li>
                         <li>
-                            <a class="dropdown-item" href="index.html#succes">SUCCES</a>
+                            <a class="dropdown-item" href="#succes">SUCCES</a>
                         </li>
                         <li><a class="dropdown-item" href="Team-BS.html">TEAM</a></li>
                         <li>
-                            <a class="dropdown-item" href="catalogue.html">CATALOGUE</a>
+                            <a class="dropdown-item" href="/product">CATALOGUE</a>
                         </li>
+
                         <li>
                             <a class="dropdown-item" href="Formulaire_2.html">NOUS CONTACTER</a>
                         </li>
@@ -71,7 +72,7 @@
                     <a
                         class="nav-link disabled"
                         href="#"
-                        tabindex="-1"
+                        tab
                         aria-disabled="true"
                     >Disabled</a
                     >
