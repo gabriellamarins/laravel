@@ -13,7 +13,7 @@
             <!-- 1/3 de la largeur (largeur de 4 colonnes)-->
             <div class="silent col">
                 <a href="index.html">
-                    <img src="{{asset('')}}" alt="Logo silent"
+                    <img src="{{asset('photo/logo_silent.jpg')}}" alt="Logo silent"
                     /></a>
                 SILENT
             </div>
@@ -22,15 +22,15 @@
             <div class="col">
                 <div class="reseau">
                     <a href="https://www.facebook.com/RickAstley">
-                        <img src="photo/facebook_1.png" alt="Logo facebook"
+                        <img src="{{asset('photo/facebook_1.png')}}" alt="Logo facebook"
                         /></a>
 
                     <a href="https://www.instagram.com/silent_fnf/">
-                        <img src="photo/insta_1.png" alt="Logo instagram"
+                        <img src="{{asset('photo/insta_1.png')}}" alt="Logo instagram"
                         /></a>
 
                     <a href="https://twitter.com/Silent_Fnf"
-                    ><img src="photo/twitter_1.png" alt="Logo twitter"
+                    ><img src="{{asset('photo/twitter_1.png')}}" alt="Logo twitter"
                         /></a>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="campus">
                     <a href="https://le-campus-numerique.fr/">
                         <img
-                            src="photo/logo_campus_header_1.png"
+                            src="{{asset('photo/logo_campus_header_1.png')}}"
                             alt="Logo campus numerique"
                             class="logo-campus"
                         /></a>

@@ -2,6 +2,11 @@
 @section('content')
 
 
+
+
+
+{{--    {{$products}}--}}
+
     <h6 id="clochard" >BIENVENUE CHEZ SILENT BOUTIQUE</h6>
     <div class="capture">
         <img src="photo/Capture.PNG" class="img-fluid" alt="capture" />
@@ -121,6 +126,28 @@
     <h6>Cop ta snkrs pour ton panard</h6>
     <div class="capture"></div>
 
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+
+
+    @foreach ($products as $product)
+{{--        {{$product->name}}--}}
+{{--        <li>{{$product->description}}</li>--}}
+            <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{$product->image}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="{{$product->name}}">{{$product->name}}</h5>
+                <p class="{{$product->description}}">{{$product->description}}</p>
+                <a href="/product/{{$product->id}}" class="btn btn-primary">Acheter</a>
+            </div>
+        </div>
+            </div>
+    @endforeach
+            </div>
+            </div>
+
+
     <div class="container">
 
 
@@ -202,6 +229,14 @@
                         alt="photo Chris">
 
                 </div>
+
+
+
+
+
+
+
+
 
 
                 <h2>NIKE</h2>
