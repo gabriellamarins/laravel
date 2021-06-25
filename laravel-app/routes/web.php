@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\BackofficeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,7 +26,7 @@ Route::get('/product/{id}', [ProductController::class, 'show']);
 
 Route::get('/carte', [CartController::class, 'index']);
 
-
+Route::resource('backoffice/product', BackofficeController::class);
 
 //Route::get('/', function () {
 //    return view ('HelloWorld');
