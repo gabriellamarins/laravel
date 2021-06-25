@@ -15,7 +15,9 @@ class ProductController extends Controller
 //        echo "Liste des Produits";
 
 
-        $products = Product::all('name');
+        $products = Product::all()
+        ->sortBy('name');
+
 
 
         $listeproduits = "Liste des Produits";
