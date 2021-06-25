@@ -14,6 +14,7 @@
         <div class="card-body">
             <h5 class="{{$product->name}}">{{$product->name}}</h5>
             <p class="{{$product->description}}">{{$product->description}}</p>
+            <p class="{{$product->price}}">{{$product->price}} € </p>
             <a href="#" class="btn btn-primary">Acheter</a>
         </div>
     </div>
