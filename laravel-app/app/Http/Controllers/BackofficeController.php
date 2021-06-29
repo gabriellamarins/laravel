@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
+
 
 class BackofficeController extends Controller
 {
@@ -13,7 +15,13 @@ class BackofficeController extends Controller
      */
     public function index()
     {
-        //
+
+        $products = Product::all()
+            ->sortBy('price');
+
+        return view('backoffice', ['products' => $products]);
+
+
     }
 
     /**
@@ -23,7 +31,7 @@ class BackofficeController extends Controller
      */
     public function create()
     {
-        //
+        return view('backoffice');
     }
 
     /**
@@ -34,7 +42,14 @@ class BackofficeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $backoffice = [
+            'backofficeresult' => [
+                'produit' => $request->input('product'),
+                'prix' => $request->input('price'),
+                'categorie' => $request->input('categories'),
+            ],
+        ];
+        return view('backofficeresult', $backoffice);
     }
 
     /**

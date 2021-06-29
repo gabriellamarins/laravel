@@ -1,7 +1,6 @@
 @extends('layout')
 @section('content')
 
-
 <html lang="">
 
 <h1>
@@ -21,16 +20,5 @@
     <input type="submit" value="envoyer"> <br><br>
 
 </form>
-
-
-
-<h1>
-
-
-</h1>
-{{--{{$backoffice}}--}}
-
-
-</html>
 
 @endsection

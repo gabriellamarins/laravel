@@ -26,20 +26,6 @@ Route::get('/product/{id}', [ProductController::class, 'show']);
 
 Route::get('/carte', [CartController::class, 'index']);
 
-Route::resource('backoffice/product', BackofficeController::class);
+Route::resource('/backoffice', BackofficeController::class);
 
-//Route::get('/', function () {
-//    return view ('HelloWorld');
-//});
-//
-//Route::get('/product', function () {
-//    return ('Liste des produits');
-//});
-//
-//Route::get('/product/{id}', function ($id) {
-//    return ('Fiche du produit'.$id);
-//});
-//
-//Route::get('/cart', function () {
-//    return ('Panier');
-//});
+
