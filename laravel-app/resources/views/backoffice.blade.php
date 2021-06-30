@@ -26,7 +26,12 @@
                         <p class="{{$product->description}}">{{$product->description}}</p>
                         <p class="{{$product->price}}">{{$product->price}} € </p>
                         <a href="/product/{{$product->id}}" class="btn btn-primary">Acheter</a>
-                        <a href="{{route('backoffice.create')}}" class="btn btn-primary">Supprimer ce produit</a>
+
+                        <form action ="{{route ('backoffice.destroy', $product->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger delete-btn"> <icon-icon name="trash outline"></icon-icon>Supprimer ce produit</button>
+                                   </form>
                     </div>
 
                 </div>

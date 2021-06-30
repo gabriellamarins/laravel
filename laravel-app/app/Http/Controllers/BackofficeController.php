@@ -120,6 +120,15 @@ class BackofficeController extends Controller
      */
     public function destroy($id)
     {
-        return view('backoffice.destroy');
+//        $products = Product::remove($id);
+
+        Product::findOrFail($id)->delete();
+
+//        return redirect('backoffice.index') ->with('success', 'Produit Supprimé du Catalogue');
+
+        return redirect() -> route('backoffice.index')->with('success', 'Produit Supprimé du Catalogue');
+
+
+//        return view('backoffice.delete', ['product'=>$products]);
     }
 }
