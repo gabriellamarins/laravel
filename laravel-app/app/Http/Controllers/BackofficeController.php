@@ -31,7 +31,7 @@ class BackofficeController extends Controller
      */
     public function create()
     {
-        return view('backoffice');
+        return view('backoffice.create');
     }
 
     /**
@@ -42,15 +42,41 @@ class BackofficeController extends Controller
      */
     public function store(Request $request)
     {
-        $backoffice = [
-            'backofficeresult' => [
-                'produit' => $request->input('product'),
-                'prix' => $request->input('price'),
-                'categorie' => $request->input('categories'),
-            ],
-        ];
-        return view('backofficeresult', $backoffice);
+
+
+
+        $newproduct = new Product();
+
+        $newproduct->name = $request->input('name');
+        $newproduct->description = $request->input('description');
+        $newproduct->price = $request->input('price');
+        $newproduct->image = $request->input('image');
+        $newproduct->weight = $request->input('weight');
+        $newproduct->quantity = $request->input('quantity');
+        $newproduct->available = $request->input('available');
+        $newproduct->category_id = $request->input('category_id');
+
+        $newproduct->save();
+
+        return redirect(route('backoffice.index'));
+
     }
+
+
+
+
+
+
+//        $backoffice = [
+//            'backofficeresult' => [
+//                'produit' => $request->input('product'),
+//                'prix' => $request->input('price'),
+//                'categorie' => $request->input('categories'),
+//            ],
+//        ];
+
+
+
 
     /**
      * Display the specified resource.
@@ -94,6 +120,6 @@ class BackofficeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view('backoffice.destroy');
     }
 }
