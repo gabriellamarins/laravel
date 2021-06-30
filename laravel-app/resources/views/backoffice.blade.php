@@ -25,7 +25,14 @@
                         <h5 class="{{$product->name}}">{{$product->name}}</h5>
                         <p class="{{$product->description}}">{{$product->description}}</p>
                         <p class="{{$product->price}}">{{$product->price}} € </p>
-                        <a href="/product/{{$product->id}}" class="btn btn-primary">Acheter</a>
+                        <a href="/product/{{$product->id}}" class="btn btn-primary">Détails</a>
+
+
+
+                            <a href="{{route('backoffice.edit', $product->id)}}" type="submit" class="btn btn-primary"> <icon-icon name="trash outline"></icon-icon>Modifier ce produit</a>
+
+
+
 
                         <form action ="{{route ('backoffice.destroy', $product->id)}}" method="post">
                             @csrf

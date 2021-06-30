@@ -97,7 +97,8 @@ class BackofficeController extends Controller
      */
     public function edit($id)
     {
-        //
+              $editproduct = Product::findOrFail($id);
+                return view('backoffice.edit',['product'=> $editproduct]);
     }
 
     /**
@@ -109,7 +110,8 @@ class BackofficeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+
     }
 
     /**
