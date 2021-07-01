@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 
@@ -111,6 +112,20 @@ class BackofficeController extends Controller
     public function update(Request $request, $id)
     {
 
+        $updateproduct = Product::findOrFail($id);
+
+        $updateproduct->name = $request->input('name');
+        $updateproduct->description = $request->input('description');
+        $updateproduct->price = $request->input('price');
+        $updateproduct->image = $request->input('image');
+        $updateproduct->weight = $request->input('weight');
+        $updateproduct->quantity = $request->input('quantity');
+        $updateproduct->available = $request->input('available');
+        $updateproduct->category_id = $request->input('category_id');
+
+        $updateproduct->save();
+
+        return redirect(route('backoffice.index'));
 
     }
 
