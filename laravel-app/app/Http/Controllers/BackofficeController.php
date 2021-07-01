@@ -47,6 +47,7 @@ class BackofficeController extends Controller
 
 
         $newproduct = new Product();
+//       $request->validated();
 
         $newproduct->name = $request->input('name');
         $newproduct->description = $request->input('description');
@@ -57,7 +58,11 @@ class BackofficeController extends Controller
         $newproduct->available = $request->input('available');
         $newproduct->category_id = $request->input('category_id');
 
+
+
         $newproduct->save();
+
+
 
         return redirect(route('backoffice.index'));
 

@@ -10,28 +10,28 @@
 <form method="post" action="{{route('backoffice.store')}}">
     @csrf
     <b>Produit</b>
-    <input type="texte" name="name"> <br><br>
+    <input type="texte" name="name" required> <br><br>
 
     <b>Description</b>
     <input type="texte" name="description"> <br><br>
 
     <b>Prix</b>
-    <input type="texte" name="price"> <br><br>
+    <input type="number" min="1" name="price" required> <br><br>
 
     <b>Image</b>
     <input type="texte" name="image"> <br><br>
 
     <b>Weight</b>
-    <input type="texte" name="weight"> <br><br>
+    <input type="number" name="weight" required> <br><br>
 
     <b>Quantity</b>
-    <input type="texte" name="quantity"> <br><br>
+    <input type="number" min="1" name="quantity" required> <br><br>
 
     <b>Available</b>
-    <input type="texte" name="available"> <br><br>
+    <input type="number" min="0" max="1" name="available" required> <br><br>
 
       <b>Category</b>
-    <input type="texte" name="category_id"> <br><br>
+    <input type="number" min="1" name="category_id" required> <br><br>
 
 
 
