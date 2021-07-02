@@ -12,9 +12,10 @@
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{$product->image}}" alt="Card image cap">
         <div class="card-body">
-            <h5 class="{{$product->name}}">{{$product->name}}</h5>
-            <p class="{{$product->description}}">{{$product->description}}</p>
-            <p class="{{$product->price}}">{{$product->price}} € </p>
+            <h5 >{{$product->name}}</h5>
+            <p >{{$product->description}}</p>
+            <p >{{$product->price}} € </p>
+            <p >{{$product-> category -> name }} </p>
             <a href="#" class="btn btn-primary">Acheter</a>
         </div>
     </div>

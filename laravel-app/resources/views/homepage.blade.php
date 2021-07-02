@@ -96,7 +96,7 @@
                 <img src="photo/rectangle_23.png" height="80%" width="80%" />
             </div>
             <div class="col-3 justify-content-center">
-                <img src="photo/rectangle_25.png" height="80%" width="80%" />
+                <img src="" height="80%" width="80%" />
             </div>
         </div>
     </div>

@@ -28,7 +28,6 @@
                         <a href="/product/{{$product->id}}" class="btn btn-primary">Détails</a>
 
 
-
                             <a href="{{route('backoffice.edit', $product->id)}}" type="submit" class="btn btn-primary"> <icon-icon name="trash outline"></icon-icon>Modifier ce produit</a>
 
 
