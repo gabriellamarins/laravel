@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
-use App\Models\Order;
+use App\Models\Orders;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -15,7 +15,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Orders::all();
+//        dd($orders);
+        return view('orders.orders', ['orders' => $orders]);
+
     }
 
     /**
@@ -47,7 +50,9 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = Orders::find($id);
+//        dd($category->products);
+        return view('orders.order-details', ['orders' => $order] );
     }
 
     /**
@@ -84,12 +89,12 @@ class OrderController extends Controller
         //
     }
 
-public function joinOrder($id) {
-        $product = auth()->product();
-        $product->orderAsProduct()->attach($id);
-
-        $order = Order::findOrFail($id);
-        return redirect('/catalogue')->with('Le product à été ajouté au panier');
-}
+//public function joinOrder($id) {   ---- não sei como isso funciona
+//        $product = auth()->product();
+//        $product->orderAsProduct()->attach($id);
+//
+//        $order = Orders::findOrFail($id);
+//        return redirect('/catalogue')->with('Le product à été ajouté au panier');
+//}
 
 }

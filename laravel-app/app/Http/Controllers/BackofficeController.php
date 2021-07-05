@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 
 class BackofficeController extends Controller
@@ -48,6 +49,20 @@ class BackofficeController extends Controller
 
         $newproduct = new Product();
 //       $request->validated();
+        $validator= Validator::make($request->all(),[
+            'name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'price' => 'required|integer|gt:0',
+
+        ]);
+        if ($validator->fails()) {
+            return redirect(route('backoffice.create'))
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
+
 
         $newproduct->name = $request->input('name');
         $newproduct->description = $request->input('description');
@@ -64,7 +79,14 @@ class BackofficeController extends Controller
 
 
 
+
+
+
         return redirect(route('backoffice.index'));
+
+
+
+
 
     }
 
@@ -154,3 +176,5 @@ class BackofficeController extends Controller
 //        return view('backoffice.delete', ['product'=>$products]);
     }
 }
+
+

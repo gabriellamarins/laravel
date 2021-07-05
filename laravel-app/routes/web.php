@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\BackofficeController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,4 +33,4 @@ Route::resource('customer', CustomerController::class);
 
 Route::resource('category', CategoryController::class);
 
-Route::resource('cart', CartController::class);
+Route::resource('orders', OrderController::class);

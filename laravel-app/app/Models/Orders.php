@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Orders extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
 
     public function customers() {
         return $this->belongsTo(Customer::class); //select * from user where project_id = x
     }
 
 public function products () {
-        return $this->hasMany(Product::class);
+        return $this->belongsToMany(Product::class);
 }
 
 

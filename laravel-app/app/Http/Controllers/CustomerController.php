@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
-use App\Models\Order;
+use App\Models\Orders;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -90,7 +90,7 @@ class CustomerController extends Controller
 
     public function orders() {
 
-        return $this->hasMany(Order::class); // select * from orders where customer_id = x
+        return $this->hasMany(Orders::class); // select * from orders where customer_id = x
 
     }
 }

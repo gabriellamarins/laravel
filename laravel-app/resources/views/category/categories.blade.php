@@ -7,7 +7,7 @@
 
     @foreach ($categories as $category)
                 {{$category->name}}
-@php(dd ($category))
+{{--@php(dd ($category))--}}
         @endforeach
 
 

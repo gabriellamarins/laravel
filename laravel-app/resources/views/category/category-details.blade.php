@@ -6,6 +6,9 @@
 <h1>
     {{$category->name}}
     </h1>
+<br>
+<br>
+
 <div class="container">
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
     @foreach ($category as $cat)
@@ -29,13 +32,17 @@
 
                 </div>
             </div>
+            <br>
         </div>
+
 
     @endforeach
                 @break
             @endforeach
         </div>
 </div>
+    <br>
+
 
 
 

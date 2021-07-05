@@ -4,15 +4,15 @@
 <html lang="">
 
 <h1>
-    Back Office
+    Back Office - Créer un Produit
 </h1>
 
 @if ($errors->any())
     <div class="alert alert-danger">
-        <strong>ERROR</strong> There were some problems with your input.<br><br>
+        <strong>Erreur: </strong> Veuillez remplir tous les champs du formulaire.<br><br>
         <ul>
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+                <p>{{ $error }}</p>
             @endforeach
         </ul>
     </div>
@@ -21,13 +21,13 @@
 <form method="post" action="{{route('backoffice.store')}}">
     @csrf
     <b>Produit</b>
-    <input type="texte" name="name" required> <br><br>
+    <input type="texte" name="name" > <br><br>
 
     <b>Description</b>
     <input type="texte" name="description"> <br><br>
 
     <b>Prix</b>
-    <input type="number" min="1" name="price" required> <br><br>
+    <input type="number" min="1" name="price"> <br><br>
 
     <b>Image</b>
     <input type="texte" name="image"> <br><br>
@@ -48,7 +48,7 @@
 
 
 
-    <input type="submit" value="envoyer"> <br><br>
+    <input type="submit" value="créer"> <br><br>
 
 </form>
 
