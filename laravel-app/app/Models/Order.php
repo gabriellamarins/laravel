@@ -10,11 +10,14 @@ class Order extends Model
     use HasFactory;
 
 
-    public function customer() {
+    public function customers() {
         return $this->belongsTo(Customer::class); //select * from user where project_id = x
     }
 
-//    public function customer() {
-//        return $this->belongsTo('App\Models\Customer');
-//    }
+public function products () {
+        return $this->hasMany(Product::class);
+}
+
+
+
 }

@@ -31,3 +31,5 @@ Route::resource('backoffice', BackofficeController::class);
 Route::resource('customer', CustomerController::class);
 
 Route::resource('category', CategoryController::class);
+
+Route::resource('cart', CartController::class);

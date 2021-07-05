@@ -10,6 +10,6 @@ class Customer extends Model
     use HasFactory;
 
     public function orders() {
-        return $this->hasMany('App\Models\Order');
+        return $this->hasMany(Order::class);
     }
 }

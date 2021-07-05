@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -83,8 +84,12 @@ class OrderController extends Controller
         //
     }
 
-    public function customer() {
-        return $this->belongsTo(Customer::class); //select * from user where project_id = x
-    }
+public function joinOrder($id) {
+        $product = auth()->product();
+        $product->orderAsProduct()->attach($id);
+
+        $order = Order::findOrFail($id);
+        return redirect('/catalogue')->with('Le product à été ajouté au panier');
+}
 
 }
